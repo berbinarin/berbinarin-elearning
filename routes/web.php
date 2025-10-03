@@ -1,7 +1,12 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+// Authentication Routes
+require __DIR__.'/auth.php';
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Landing Routes
+require __DIR__.'/landing.php';
+
+// Dashboard Routes
+ require __DIR__.'/dashboard.php';
+
+
