@@ -10,7 +10,7 @@
 <body>
     <div class="min-h-screen bg-slate-400 flex justify-center items-center">
         <h1 class="text-3xl font-bold bg-primary w-[15em] font-plusJakartaSans text-white">
-            Bebrinarin Keren
+            Hello Bebrinar.
         </h1>
     </div>
 </body>
