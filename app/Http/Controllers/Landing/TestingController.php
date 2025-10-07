@@ -20,4 +20,9 @@ class TestingController
     {
         return view('landing.pretest.index');
     }
+
+    public function pretestQuestion()
+    {
+        return view('landing.pretest.test');
+    }
 }
