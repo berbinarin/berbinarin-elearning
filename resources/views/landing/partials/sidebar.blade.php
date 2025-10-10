@@ -5,21 +5,18 @@
     #sidebarBerbinar.closed {
         transform: translateX(-100%);
     }
-    #openSidebarBtn {
-        display: none;
-    }
     #sidebarBerbinar.closed ~ #openSidebarBtn {
         display: block;
     }
 </style>
 
 <!-- Tombol buka sidebar (di luar sidebar, misal di layout utama) -->
-<button id="openSidebarBtn" class="fixed top-6 left-6 z-50 bg-[#3986A3] text-white px-3 py-2 rounded-full shadow-lg hidden">
+<button id="openSidebarBtn" class="top-6 left-6 ml-5 z-40 bg-[#3986A3] text-white px-3 py-2 rounded-full shadow-lg sticky lg:hidden">
     <i class="bx bx-menu text-2xl"></i>
 </button>
 
 <!-- Sidebar -->
-<nav id="sidebarBerbinar" class="flex w-72 flex-col bg-white py-8 pl-10 pr-6 fixed top-0 left-0 h-full z-40 transition-transform duration-300">
+<nav id="sidebarBerbinar" class="flex w-72 flex-col bg-white py-8 pl-10 pr-6 max-sm:fixed top-0 left-0 h-full z-50 transition-transform duration-300">
     <!-- Tombol tutup sidebar -->
     <button id="closeSidebarBtn" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl">&times;</button>
     {{-- LOGO BERBINAR --}}
@@ -81,12 +78,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     closeBtn.addEventListener('click', function () {
         sidebar.classList.add('closed');
-        openBtn.style.display = 'block';
+        sidebar.classList.add('fixed');
+        openBtn.classList.remove('lg:hidden');
     });
 
     openBtn.addEventListener('click', function () {
         sidebar.classList.remove('closed');
-        openBtn.style.display = 'none';
+        sidebar.classList.remove('fixed');
+        openBtn.classList.add('lg:hidden');
     });
 });
 </script>

@@ -12,3 +12,4 @@ Route::get('/pretest', [TestingController::class, 'pretest'])->name('pretest.ind
 
 Route::get('/pretest/question', [TestingController::class, 'pretestQuestion'])->name('pretest.question');
 
+Route::get('/materials', [TestingController::class, 'materials'])->name('materials.index');

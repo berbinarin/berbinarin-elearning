@@ -10,15 +10,19 @@
         {{-- Additional Style --}}
         @yield("style")
     </head>
-    <body class="relative w-full overflow-x-hidden">
+    <body class="relative w-full overflow-x-hidden bg-gray-100">
 
-        {{-- Sidebar --}}
-        @include("landing.partials.questions-sidebar")
+        <div class="flex h-screen w-full select-none lg:flex-row-reverse">
+            {{-- Sidebar --}}
+            <div class="flex-shrink-0">
+                @include("landing.partials.questions-sidebar")
+            </div>
 
-        <main class="relative flex w-full flex-col bg-[#F7F9FA] font-plusJakartaSans">
             {{-- Main Content --}}
-            @yield("content")
-        </main>
+            <main class="w-full my-1 flex-1 overflow-y-auto rounded-l-lg px-10 pb-2 pt-2 transition duration-500 ease-in-out">
+                @yield("content")
+            </main>
+        </div>
 
         {{-- Script --}}
         @include("landing.partials.script")

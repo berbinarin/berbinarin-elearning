@@ -25,4 +25,9 @@ class TestingController
     {
         return view('landing.pretest.test');
     }
+
+    public function materials()
+    {
+        return view('landing.materials.index');
+    }
 }
